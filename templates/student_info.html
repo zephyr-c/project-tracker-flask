@@ -1,11 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Student Info</title>
 </head>
 <body>
-  <h1>{{ first }} {{ last }}</h1>
+    <h1>{{ first }} {{ last }}</h1>
 
-  <p>GitHub Account: {{ github }}</p>
+    <p>GitHub Account: {{ github }}</p>
+
+<ul>
+    {% for row in rows %}
+        <li>{{ first }} received grade of {{ row[1] }} for {{ row[0] }}</li>
+    {% endfor %}
+</ul>
 </body>
 </html>
+
